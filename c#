@@ -1,0 +1,37 @@
+using CRUD_Dapper.Models;
+using Dapper;
+using Microsoft.AspNetCore.Mvc;
+using Npgsql;
+using NuGet.Protocol;
+using System.Data;
+
+namespace CRUD_Dapper.Controllers
+{
+    public class PessoasController : Controller
+    {
+
+        private readonly string ConnectionString = "User ID=postgres;Password=Vinagrete@#$k;Host=localhost;Port=5432;Database=PessoasDB;";
+       
+        public IActionResult index()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View(); 
+        }
+
+        [HttpPost]
+        public IActionResult Create(Pessoas pessoas)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+
+            return View(pessoas) ;
+        }
+    }
+}
