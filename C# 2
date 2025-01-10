@@ -1,0 +1,14 @@
+namespace CRUD_Dapper.Models
+{
+    public class Pessoas
+    {
+
+  
+
+        public string name { get; set; }
+
+        public int idade { get; set; }
+
+        public float Peso{ get; set; }
+    }
+}
